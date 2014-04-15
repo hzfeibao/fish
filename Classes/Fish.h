@@ -5,8 +5,8 @@
 
 typedef enum{
 	k_Fish_Type_Red = 0,
-	k_Fish_type_Yellow,
-	k_Fish_type_Count
+	k_Fish_Type_Yellow,
+	k_Fish_Type_Count
 }FishType;
 
 class Fish : public cocos2d::CCNode
