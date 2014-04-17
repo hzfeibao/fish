@@ -1,4 +1,6 @@
 #pragma once
+#ifndef __FishingJoy__FishLayer__
+#define __FishingJoy__FishLayer__
 #include "cocos2d.h"
 #include "Fish.h"
 class FishLayer : public cocos2d::CCLayer

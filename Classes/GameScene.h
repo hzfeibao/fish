@@ -1,6 +1,6 @@
 
 #ifndef __FishingJoy__GameScene__
-#define __FishingJoy_GameScene__
+#define __FishingJoy__GameScene__
 #include "cocos2d.h"
 #include "FishLayer.h"
 #include "PanelLayer.h"

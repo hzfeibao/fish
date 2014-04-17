@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
-
+#include "FishingJoyData.h"
+#include "GameScene.h"
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
@@ -25,7 +26,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     pDirector->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    CCScene *pScene = HelloWorld::scene();
+    //CCScene *pScene = HelloWorld::scene();
+    CCScene *pScene = GameScene::create();
 
     // run
     pDirector->runWithScene(pScene);
@@ -35,8 +37,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
 void AppDelegate::applicationDidEnterBackground() {
-    CCDirector::sharedDirector()->stopAnimation();
-
+   // CCDirector::sharedDirector()->stopAnimation();
+    CCDirector::sharedDirector()->pause();
+    FishingJoyData::sharedFishingJoyData()->flush();
     // if you use SimpleAudioEngine, it must be pause
     // SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
 }

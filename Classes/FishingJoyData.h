@@ -2,7 +2,7 @@
 #ifndef __FishingJoy__FishingJoyData__
 #define __FishingJoy__FishingJoyData__
 #include "cocos2d.h"
-class FishingJoyData : public coco2d::CCObject
+class FishingJoyData : public cocos2d::CCObject
 {
     public:
 	static FishingJoyData* sharedFishingJoyData();
